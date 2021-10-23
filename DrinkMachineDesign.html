@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="stylesheet2.css">
+
+    <title> Drink Machine </title>
+
+    <!-- fonts DM Serif Display & Inter Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+   
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="left">
+
+            <div class="header">
+
+                <h2 class="animation a1"> Drinks Machine </h2>
+
+                <h4 class="animation a2"> Insert money first, then choose a drink.</h4>
+
+            </div>
+
+            <div class="form">
+
+                <form> 
+                     
+                    <input class="form-field animation a3" type="number" text="text" name="ones" id="ones" placeholder="Ones"  oninput="tally()" >
+                    
+                    <input class="form-field animation a4" type="number" text="text" name="fives" id="fives" placeholder="Fives"  oninput="tally()" >
+                    
+                    <input class="form-field animation a6" type="number" text="text" name="tens" id="tens" placeholder="Tens"  oninput="tally()" >
+                                       
+                    <input class="form-field animation a7" type="number" text="text" name="twenties" id="twenties" placeholder="Twenties"  oninput="tally()" >
+                    
+                    <input class="form-field animation a8" type="number" text="text" name="fifties" id="fifties" placeholder="Fifties" value="" oninput="tally()" >          
+
+                </form>
+
+
+                <button class="animation a9"  value="Coke" id="coke" onclick="dispenseCoke(0)" > Coke = 55 </button>
+                <button class="animation a10"  value="Tango" id="tango" onclick="dispenseTango(1)" > Tango = 35 </button>
+                <button class="animation a11"  value="Water" id="water" onclick="dispenseWater(2)" style="margin-bottom: 5px;" > Water =  45 </button>
+                <br>
+                <button class="animation a12 cancelButton"  value="Cancel" id="cancel" onclick="cancel()"> Cancel </button>
+
+                <div class="container-output">
+
+                    <h5 class="animation a13"> Total Entered:  <span id="paid" >0</span></h5>
+
+                    <h5 class="animation a14" id="message">  </h5>
+
+                </div>
+
+            </div>
+
+            <script src="DrinkMachine.js"></script>
+        </div>
+
+        <div class="right"></div>
+
+    </div>
+
+</body>
+</html>
